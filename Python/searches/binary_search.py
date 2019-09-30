@@ -9,7 +9,7 @@ from typing import (
 )
 
 
-def binary_search(sorted_collection: List[int], item: int) -> int:
+def binary_search_by_loop(sorted_collection: List[int], item: int) -> int:
     """
     二分查找（非递归实现）
     :param sorted_collection: 有序数组
