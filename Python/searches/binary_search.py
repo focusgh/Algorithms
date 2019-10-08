@@ -12,6 +12,7 @@ from typing import (
 def binary_search_by_loop(sorted_collection: List[int], item: int) -> int:
     """
     二分查找（非递归实现）
+
     :param sorted_collection: 有序数组
     :param item: 所要查找的数据项
     :return: index or -1
@@ -49,6 +50,7 @@ def binary_search_by_recursion(sorted_collection: List[int], item: int) -> int:
 def _binary_search_by_recursion(sorted_collection: List[int], left: int, right: int, item: int) -> int:
     """
     递归方式二分查找具体实现
+
     :param sorted_collection: 有序数组
     :param left: 数组起始位置
     :param right: 数组结束位置

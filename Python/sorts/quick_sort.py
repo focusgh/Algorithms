@@ -22,6 +22,9 @@ def _partition(collection, low, high):
 
 
 def _quick_sort(collection: List[int], low: int, high: int) -> List[int]:
+    """
+    快速排序（实现）
+    """
 
     if low >= high:
         return collection
@@ -35,6 +38,7 @@ def _quick_sort(collection: List[int], low: int, high: int) -> List[int]:
 def quick_sort(collection: List[int]) -> List[int]:
     """
     快速排序
+
     不需要额外的空间开销，在待排序数组本身内部进行排序
     """
     return _quick_sort(collection, 0, len(collection) - 1)

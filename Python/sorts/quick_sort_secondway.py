@@ -8,6 +8,7 @@ from typing import List
 def quick_sort(collection: List[int]) -> List[int]:
     """
     快速排序
+
     此方式，需要额外的空间开销来支持。
     """
     length = len(collection)
