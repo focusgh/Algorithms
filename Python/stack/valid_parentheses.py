@@ -4,6 +4,11 @@
 
 
 class Solution:
+    """
+    判断给定字符串是否是有效字符串
+
+    leetcode 题目: https://leetcode-cn.com/problems/valid-parentheses/
+    """
 
     def is_valid(self, s: str) -> bool:
 
