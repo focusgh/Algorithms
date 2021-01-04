@@ -12,6 +12,7 @@ def _partition(collection, low, high):
     原地分区函数
     """
     pivot = collection[high]
+    # i 指向比 “较大区” 首元素下标
     i = low
     for j in range(low, high):
         if collection[j] < pivot:
@@ -45,5 +46,5 @@ def quick_sort(collection: List[int]) -> List[int]:
 
 
 if __name__ == "__main__":
-    test_list = [5, -1, 9, 3, 7]
+    test_list = [5, 10, -1, 9, 3, 7]
     print(quick_sort(test_list))
