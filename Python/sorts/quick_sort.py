@@ -12,7 +12,7 @@ def _partition(collection, low, high):
     原地分区函数
     """
     pivot = collection[high]
-    # i 指向比 “较大区” 首元素下标
+    # i 在 for 循环时，总是指向 “比较大区” 首元素下标
     i = low
     for j in range(low, high):
         if collection[j] < pivot:
