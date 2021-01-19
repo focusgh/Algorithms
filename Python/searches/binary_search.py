@@ -22,7 +22,7 @@ def binary_search_by_loop(sorted_collection: List[int], item: int) -> int:
     right = len(sorted_collection) - 1
 
     while left <= right:
-        midpoint = (left + right) // 2
+        midpoint = left + (right - left) >> 1
         current_item = sorted_collection[midpoint]
         if current_item == item:
             return midpoint
@@ -60,7 +60,7 @@ def _binary_search_by_recursion(sorted_collection: List[int], left: int, right: 
     if left > right:
         return -1
 
-    midpoint = (left + right) // 2
+    midpoint = left + (right - left) >> 1
     current_item = sorted_collection[midpoint]
     if current_item == item:
         return midpoint
