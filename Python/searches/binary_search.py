@@ -11,10 +11,10 @@ from typing import (
 
 def binary_search_by_loop(sorted_collection: List[int], item: int) -> int:
     """
-    二分查找（非递归实现）
+    二分查找（循环实现）
 
     :param sorted_collection: 有序数组
-    :param item: 所要查找的数据项
+    :param item: 要查找的数据项
     :return: index or -1
     """
 
@@ -22,7 +22,7 @@ def binary_search_by_loop(sorted_collection: List[int], item: int) -> int:
     right = len(sorted_collection) - 1
 
     while left <= right:
-        midpoint = left + (right - left) >> 1
+        midpoint = left + ((right - left) >> 1)
         current_item = sorted_collection[midpoint]
         if current_item == item:
             return midpoint
@@ -39,7 +39,7 @@ def binary_search_by_recursion(sorted_collection: List[int], item: int) -> int:
     二分查找（递归实现）
 
     :param sorted_collection: 有序数组
-    :param item: 所要查找的数据项
+    :param item: 要查找的数据项
     :return: index or -1
     """
     left = 0
@@ -48,19 +48,11 @@ def binary_search_by_recursion(sorted_collection: List[int], item: int) -> int:
 
 
 def _binary_search_by_recursion(sorted_collection: List[int], left: int, right: int, item: int) -> int:
-    """
-    递归方式二分查找具体实现
 
-    :param sorted_collection: 有序数组
-    :param left: 数组起始位置
-    :param right: 数组结束位置
-    :param item: 所要查找的数据项
-    :return: index or -1
-    """
     if left > right:
         return -1
 
-    midpoint = left + (right - left) >> 1
+    midpoint = left + ((right - left) >> 1)
     current_item = sorted_collection[midpoint]
     if current_item == item:
         return midpoint
@@ -87,3 +79,10 @@ def binary_search_by_bisect(sorted_collection: List[int], item: int) -> int:
     if index != len(sorted_collection) and item == sorted_collection[index]:
         return index
     return -1
+
+
+if __name__ == "__main__":
+
+    coll = [1, 2, 3, 3, 4, 5]
+    print(binary_search_by_loop(coll, 4))
+    print(binary_search_by_recursion(coll, 4))
